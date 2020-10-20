@@ -1,5 +1,3 @@
-Bee [] bob;
-
 void setup() {
   size(600, 400);
   bob = new Bee[200];
@@ -16,16 +14,19 @@ void draw() {
   }
 }
 
+Bee [] bob;
+
 class Bee {
   int myX, myY, mySize, myColor;
   Bee() {
     myX=(int)(Math.random()*600);
     myY=(int)(Math.random()*400);
     mySize=(int)(Math.random()*15)-5;
+    myColor=color(153, 0, 0);
   }
 
   void show() {
-    fill(153, 0, 0);
+    fill(myColor);
     ellipse(myX, myY, mySize+3, mySize);
   }
 
